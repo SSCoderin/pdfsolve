@@ -7,7 +7,7 @@ import { ConvexProvider, ConvexReactClient, useMutation } from "convex/react";
 // import { createuser } from "@/convex/user";
 
 const Provider = ({ children }) => {
-  const convex = new ConvexReactClient(process.env.NEXT_PUBLIC_CONVEX_URL);
+  const convex = new ConvexReactClient(window.location.origin);
 
   const { user } = useUser();
   // const  createuser =useMutation(api.user.creatuser)
